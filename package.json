@@ -10,6 +10,8 @@
   "author": "Frederic Beauvois <boostup@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@boostup/plex-api": "^0.1.4"
+    "@boostup/plex-api": "^0.1.4",
+    "sanitize-filename": "^1.6.1",
+    "ytdl-core": "^0.20.2"
   }
 }
