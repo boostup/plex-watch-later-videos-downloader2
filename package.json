@@ -1,0 +1,12 @@
+{
+  "name": "plex-watch-later-videos-downloader2",
+  "version": "1.0.0",
+  "description": "# Roadmap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Frederic Beauvois <boostup@gmail.com>",
+  "license": "ISC"
+}
