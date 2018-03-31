@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "Frederic Beauvois <boostup@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@boostup/plex-api": "^0.1.4"
+  }
 }
