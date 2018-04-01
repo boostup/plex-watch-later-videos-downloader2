@@ -6,9 +6,10 @@ plexApi.setConfig(config.plex);
 ytSearch.setConfig(config.yt);
 
 const updateVideosMetadata = () => {
-    plexApi.getDocus()
-    .then( docus => docus.map(handleDocu) )
-    .then(plexApi.launchFileScan)
+    return plexApi.getDocus()
+        .then( _ => console.log("=====> updateVideosMetadata procedure has started"))
+        .then( docus => docus.map(handleDocu) )
+        .then(plexApi.launchFileScan)
 }
 
 module.exports = updateVideosMetadata;
