@@ -5,7 +5,7 @@ const config = require('../config');
 plexApi.setConfig(config.plex);
 ytSearch.setConfig(config.yt);
 
-const updateVideosMetadata = () => {
+const updateVideosMetadata = async () => {
     return plexApi.getDocus()
         .then( _ => console.log("=====> updateVideosMetadata procedure has started"))
         .then( docus => docus.map(handleDocu) )
