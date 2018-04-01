@@ -6,16 +6,17 @@ const beautify = require('js-beautify').js_beautify
 const sanitize = require('sanitize-filename')
 const deleteFile = require('../utils/fs/deleteFile')
 const writeFile = require('../utils/fs/writeStrToFile')
+const cmdProgress = require('../utils/flow/cmd-progress')
 
 const getWatchLaterVideos = async () => {
 
 	try {
-		console.log("=====> getWatchLaterVideos procedure has started...")
+		cmdProgress("getWatchLaterVideos procedure has started...");
 		const result = await plex.getWatchLaterVideos();
 		const videos = extract(result.MediaContainer.Video);
 		logVideos(videos);
 		videos.map(downloadVideo)
-		console.log(`=====> All downloads started (${videos.length} download(s) in total) ...`);
+		cmdProgress(`All downloads started (${videos.length} download(s) in total)...`);
 	} catch(e) {
         throw e;
 	}
@@ -65,7 +66,7 @@ const logVideos = async videos => {
 	const logFilePath = "downloads.txt";
 	await deleteFile(logFilePath);
 	const urlsStr = beautify(JSON.stringify(videos));
-	console.log(`Videos to download:\n${urlsStr}`);
+	cmdProgress(`Videos to download:\n${urlsStr}`);
 	await writeFile(logFilePath, urlsStr);
 	return videos;
 }
