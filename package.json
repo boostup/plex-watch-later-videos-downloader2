@@ -14,9 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "@boostup/plex-api": "^0.1.4",
+    "js-beautify": "^1.7.5",
     "sanitize-filename": "^1.6.1",
-    "ytdl-core": "^0.20.2",
-    "youtube-search": "^1.0.10"
+    "youtube-search": "^1.0.10",
+    "ytdl-core": "^0.20.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
