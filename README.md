@@ -5,7 +5,9 @@ This app first gets the urls of the videos from my Plex Media Server "watch late
 It uses a small package I published on NPM => https://www.npmjs.com/package/@boostup/plex-api
 
 # TO DO
-- run a small experiment mixing up async and sync function to ensure that updateVideosMetadata() will run, as it is in main.js, AFTER all async functions inside getWatchLaterVideos() are done
+- make bitbucket repo 'plex-metadata-update' obsolete
+- make APICaughtError a new utils/ module
+- Ensure that updateVideosMetadata() runs AFTER all async functions inside getWatchLaterVideos module are done with their work
 - getWatchLaterVideos>extractVideoUrls: shouldn't this function be part of my small plex-api npm package?
 - write missing tests
 - make ytSearch a package. BUT, when this becomes a package sitting inside the node_modules folder, I can't have consumers of the package write their config file there...
