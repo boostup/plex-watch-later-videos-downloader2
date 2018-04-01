@@ -1,10 +1,11 @@
 const plexApi = require('@boostup/plex-api')
 const ytSearch = require('../utils/yt-api/index')
 
-plexApi.setConfig(require('./config').plex);
-ytSearch.setConfig(require('./config').yt);
+const config = require('../config');
+plexApi.setConfig(config.plex);
+ytSearch.setConfig(config.yt);
 
-const updateAllVideosMetadata = () => {
+const updateVideosMetadata = () => {
     plexApi.getDocus()
     .then( docus => docus.map(handleDocu) )
     .then(plexApi.launchFileScan)
