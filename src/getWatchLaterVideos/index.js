@@ -3,8 +3,8 @@ const path = require('path')
 const plex = require('@boostup/plex-api')
 const ytdl = require('ytdl-core')
 const sanitize = require('sanitize-filename')
-const deleteFile = require('../utils/deleteFile')
-const writeFile = require('../utils/writeStrToFile')
+const deleteFile = require('../utils/fs/deleteFile')
+const writeFile = require('../utils/fs/writeStrToFile')
 
 const getWatchLaterVideos = () => {
 	plex.getWatchLaterVideos()
