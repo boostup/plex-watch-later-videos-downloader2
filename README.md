@@ -8,7 +8,7 @@ It uses a small package I published on NPM => https://www.npmjs.com/package/@boo
 - make bitbucket repo 'plex-metadata-update' obsolete
 - make APICaughtError a new utils/ module
 - Ensure that updateVideosMetadata() runs AFTER all async functions inside getWatchLaterVideos module are done with their work
-- getWatchLaterVideos>extractVideoUrls: shouldn't this function be part of my small plex-api npm package?
+- getWatchLaterVideos>extractVideoUrls & extractVideoMetada: shouldn't these functions be part of my small plex-api npm package?
 - write missing tests
 - make ytSearch a package. BUT, when this becomes a package sitting inside the node_modules folder, I can't have consumers of the package write their config file there...
 - replace promise syntax with async/await so that I can try/catch better
