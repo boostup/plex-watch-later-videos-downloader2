@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "start:watch": "nodemon src/index.js",
-    "updateMetata": "node update-metata.js",
+    "updateMetata": "node src/update-metadata.js",
     "test": "cross-env NODE_ENV=test mocha 'src/**/*.spec.js'",
     "test:watch": "npm test -- --watch"
   },
