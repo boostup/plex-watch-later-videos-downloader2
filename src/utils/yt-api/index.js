@@ -22,7 +22,8 @@ const searchByTitle = (term, max = 10) => {
             key: API_KEY
         };
         search(term, opts, function (error, results) {
-            if (error || results.length === 0) reject("No video found on Youtube for title: " + term);
+            if (error) return reject(error);
+            if (results.length === 0) return reject("No video found on Youtube for title: " + term);
             resolve(results[0]);
         });
     })
